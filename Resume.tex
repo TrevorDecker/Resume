@@ -1,0 +1,195 @@
+\documentclass[]{article}
+\usepackage[a4paper,margin=.25cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[absolute]{textpos}
+%\usepackage[cm]{fullpage}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\usepackage{fancyhdr}
+\setcounter{secnumdepth}{-1} %removes section numbers 
+\newcommand{\subpoint}[1]{\bullet \text{\fontsize{10pt}{12pt}\selectfont #1}}
+\newcommand{\Date}[1]{ \text{\fontsize{9pt}{12pt}\selectfont #1}}
+\begin{document}
+\addtolength{\topmargin}{1in}
+\pagestyle{empty} %removes page number
+\noindent
+
+
+
+%Name
+%\begin{center}
+\begin{textblock}{6}(5,.75)
+\begin{center}
+\begin{Huge}
+\bf
+Trevor M. Decker\\
+\end{Huge}
+tdecker@andrew.cmu.edu \\
+U.S. Citizen
+\end{center}
+\end{textblock}
+
+%\end{center}
+
+%Current address
+\begin{textblock}{3}(1,.75)
+\begin{center}
+\scriptsize
+Current Address\\
+SMC 1673, 5032 Forbes Ave.\\
+Pittsburgh, PA 15289\\
+412.266.1743 (Cell)\\
+\end{center}
+\end{textblock}
+
+
+%permanent Address
+\begin{textblock}{3}(12,.75)
+\begin{center}
+\scriptsize
+Permanent Address\\
+1109 Greenridge Lane\\
+Pittsburgh, PA 15220\\
+412.563.8388\\
+\end{center}
+\end{textblock}
+\begin{align*}
+&\\
+&\text{Objective }&&\text{To obtain a summer internship utilizing my skills in engineering and robotics.}\\[.5em]
+%
+%
+%education
+&\text{Education} && \textbf{CARNEGIE MELLON UNIVERSITY (CMU), Pittsburgh, PA} &&
+ \hspace{-.7cm} \Date{May 2015}\\[-.5em]
+& && \text{Bachelor of Science in Electrical and Computer Engineering / Robotics} && 
+\hspace{-1.3 cm} \Date{GPA 3.04/4.0}\\[-.5em]
+%nextline
+& && \text{Minors in Computer Science and$  $ Business Administration}\\[.5em]
+%
+%
+%relivant Classes
+&\text{Relevant} && \subpoint{Computer Systems}
+ \hspace{1cm}\subpoint{Structure and Design of Digital Systems}
+ \hspace{.9cm} \subpoint{Controls} 
+ && 
+ \\[-.5em]
+ & \text{Classes}&& \subpoint{Introduction to Robotics} 
+  \hspace{.1cm} \subpoint{Robot Kinematics and Dynamics} 
+   \hspace{2cm}  \subpoint{Systems and Signals}  \\[.5em]
+ %
+ %
+ %
+%Work Eperience
+&\text{Employment} && \textbf{Research Assistant, CMU Field Robotics Center (FRC)} && \hspace{-1.4cm} \Date{2011 - Current}\\[-.5em]
+& && \subpoint{ Assisted with software,hardware and electrical maintenance/development of 10+ robots}\\[-.5em]
+&\text{History} &&  \subpoint{ Designed/implemented multirobot localization algorithms in low infrastructure environments }\\[-.5em]
+& && \subpoint{ Developed Kalman filter  and EKF for sensor fusion}\\[-.5em]
+& && \subpoint{ Designed testing tools for robots used for verification by group} \\[-.5em]
+& && \subpoint{ Added vision system to robot to allow for automated robot initialization }\\[.5em]
+%
+%GOS
+& && \textbf{Mentor, Girls Of Steel FIRST Robotics Team 3504} && 
+\hspace{-1.0cm} \Date{2011 - 2013}\\[-.5em]
+%
+& && \subpoint{ Mentored CMU sponsored robotics team of 40+ high school girls from the Pittsburgh area}\\[-.5em]
+& && \subpoint{ Directly mentored programmers, who won regional innovation in control  award}\\[-.5em]
+& && \subpoint{ Co-taught Java programming course for students during past 2 summers}\\[-.5em]
+& && \subpoint{ Team earned trip to national  championship both years} \\
+%
+& && \textbf{Resident Assistant Robotics Feiyue, CMU Robotics Institute (RI) }&&
+ \hspace{-.15cm} \Date{ 2013}\\[-.5em]
+& && \subpoint{Assisted group of 30 students from China during 2 week robotics camp at CMU}\\[-.5em]
+& && \subpoint{Provided support for international students as they took classes at CMU}\\[.5em]
+%
+%
+& && \textbf{Computer Technician, City Charter High School} && 
+\hspace{-1.0cm} \Date{2009 - 2011}\\[-.5em]
+& && \subpoint{Diagnosed and repaired computers for 650+ students' computers}\\[-.5em]
+& && \subpoint{Conducted hardware repairs of screens, motherboards, and desktops}\\[-.5em]
+& && \subpoint{Built and installed OS images on computers}\\[.5em]
+%
+%
+%
+%skills
+&\text{Skills} && \textbf{ \hspace{1.2cm} Programming languages \hspace{2.5cm} Libraries \hspace{.8cm} Software} && \hspace{-2.0 cm}\textbf{Mechanical} \\[-.5em]
+& && \subpoint{C/C++ [Intermediate]} \hspace{.4cm} \subpoint{MatLab [Advanced]} \hspace{1cm} \subpoint{ROS} \hspace{1.3cm} \subpoint{SolidWorks} && \hspace{-2.0 cm} \subpoint{Mill}\\[-.5em]
+%next line
+& && \subpoint{Java [Intermediate]}
+ \hspace{.925cm}  \subpoint{Python [Intermediate]} \hspace{.655cm} \subpoint{OpenCV}
+ \hspace{.7 cm} \subpoint{\LaTeX}
+ && \hspace{-2cm} \subpoint{Lathe}\\[-.5em]
+%next line
+& && \subpoint{Verilog [Basic]} \hspace{1.65cm} \subpoint{Visual Basic [Basic]} 
+\hspace{1.05cm} \subpoint{PCL}
+\hspace{1.3cm} \subpoint{Adobe Premiere}
+&&\hspace{-2cm} \subpoint{Carbon Fiber}\\[-.5em]
+& && \subpoint{PHP/Java Script}  \hspace{1.2cm} \subpoint{SML [Basic]}
+\hspace{1.5cm} \\[.5em]
+%
+%
+%
+%Projects
+& \text{Projects} &&\textbf{Multi-Robot Lattice Assembly} && 
+\hspace{-1.45cm} \Date{2012 - Current} \\[-.5em]
+& && \subpoint{ Assisted in development of  multiple custom robots to assemble a complex structure}\\[-.5em]
+& && \subpoint{ Removed need for expensive fixturing and allows for automation of assembly process}\\[-.5em]
+& && \subpoint{ Designed robots to localize each other and collaboratively move parts for final attachment }\\[.5em]
+%Hydroponics
+& &&\textbf{Robotic Hydroponics System} &&  \hspace{0cm} \Date{2011}\\[-.5em]
+& &&\subpoint{Assisted with maintenance and repair of hydroponics system that autonomously moved plants}\\[-.5em]
+& && \subpoint{Plants can start close together and be moved once they are big enough to interfere with each other}\\[.5em]
+%final lab
+& && \textbf{Designed Final Lab for CMU Introduction to Robotics Class} && \hspace{0cm} \Date{2013}\\[-.5em]
+& && \subpoint{Developed lab to test students in Introduction to Robotics Class}\\[-.5em]
+& && \subpoint{Organized and ran lab for professor}\\[-.5em]
+& && \subpoint{Students had to build a robot which could climb a stair case }\\[.5em]
+%USAR
+& && \textbf{Urban Search and Rescue [USAR]} && \hspace{0cm} \Date{2013}\\[-.5em]
+& && \subpoint{In class simulation of robotics disaster rescue}\\[-.5em]
+& && \subpoint{Built a robot to move through a model of a disaster area to locate survivors}\\[-.5em]
+& && \subpoint{Robot could cross ruble, climb stairs and ramps, and use vision system for assisted navigation}\\
+& &&\textbf{Automated Resume Creation Plug In for Microsoft Word} && \hspace{0cm} \Date{2012} \\[-.5em]
+& && \subpoint{Created plug-in for Microsoft Word to fill in resume templates}\\[-.5em]
+& && \subpoint{Used lexicographical package to suggest importance of sections of resume}\\[.5em]
+%Activities
+%Apex
+&\text{Activities} && \textbf{Apex Buggy Team}  \\[-.5em]
+& &&\subpoint{Relay race at CMU with human driven carbon fiber carts built by students}\\[-.5em] 
+& &&\subpoint{Co-founded team as a freshman (now has 40 members)}\\[-.5em]
+& && \subpoint{Helped write constitution, and raised over \$3,000 for team}\\[-.5em]
+& &&\subpoint{Lead mechanic during 2013 Races, no mechanical faults and won our heat}\\[.5em]
+%
+& \text{Distinctions} &&\subpoint{ Black Belt,Tang Soo Do Karate}\\[-.5em]
+&  && \subpoint{ Volunteer of the Year, 2007,Carnegie Science Center 200+ hours} \\[-.5em]
+& && \subpoint{ National Honors Society, President,City Charter High School} \\
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=south west,inner sep =0pt] at ($(current page.south west)+(17.5cm,2.3cm)$) {
+     \includegraphics[width=3cm]{./QR}
+  };
+\end{tikzpicture}
+\end{align*}
+
+%for QR tag
+\begin{textblock}{3}(13,14.6)
+\begin{center}
+	Scan for my contact information
+\end{center}
+\end{textblock}
+
+
+
+ 
+
+
+
+
+
+
+
+
+\end{document}
