@@ -1,0 +1,376 @@
+\documentclass[]{article}
+\usepackage[letterpaper,margin=0.2cm,top=.7cm,left=1cm]{geometry}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.10}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{calc}
+\usepackage[absolute]{textpos}
+%\usepackage[cm]{fullpage}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{fix-cm}
+\usepackage{calc}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{xstring}
+\usetikzlibrary{shapes.geometric,calc}
+\fboxsep0pt %to avoid the extra padding around the minipage
+
+\definecolor{myblue}{rgb}{1,1,1}%{.8, 1, 1}
+\usepackage{fancyhdr}
+\setcounter{secnumdepth}{-1} %removes section numbers 
+\newcommand{\EndLine}{ \\[0em]}
+%
+% This command causes for the program to compile super slowly like never finish slow
+%\newcommand{\firstLetterUpper}[1]{
+%\uppercase{\StrLeft{#1}{1}}
+%\StrGobbleLeft{#1}{1}
+%}
+%
+%
+\newcommand{\point}[1]{\\[-.5em] \textbf{\fontsize{11pt}{12pt}\selectfont #1} \\[0em]}
+\newcommand{\subpoint}[1]{\-\hspace{.2cm}  $\bullet$ \-\hspace{.05cm} \StrLeft{#1}{120} \\[0em]}
+%todo add a second line for subpoints
+\newcommand{\subpointTwo}[1]{\-\hspace{.65cm} #1\\[0em]}
+\newcommand{\Date}[1]{ \text{\fontsize{9pt}{12pt}\selectfont (#1)}}
+\newcommand{\RighSideHeading}[1]{\vspace{-2em}\begin{center}\textbf{#1}\end{center}\vspace{-.5em}}
+\newcommand{\Heading}[1]{\\{\large \textbf{#1}\\[-.5em]  \rule{20cm}{.1cm} \- \vspace{-.25cm}}}
+\newcommand\score[2]{
+\hspace*{-.5cm}
+\pgfmathsetmacro\pgfxa{#1+1}
+\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw,inner sep=1.3pt,anchor=outer point 3]
+  \begin{tikzpicture}[baseline]
+    \foreach \i in {1,...,#2} {
+    \pgfmathparse{(\i<=#1?"gray":"white")}%(\i<=#1?"yellow":"gray")}
+    \edef\starcolor{\pgfmathresult}
+    \draw (\i*1.75ex,0) node[name=star\i,scorestars,fill=\starcolor]  {};
+   }
+  \end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% begin document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%
+%
+%
+\begin{textblock}{9}(3.72,.25)
+\begin{center}
+{\fontsize{40}{40}\selectfont Trevor M. Decker}\\[.25em]
+{\fontsize{9}{9}\selectfont
+Cell: 412-266-1743  \hspace*{.5cm} email: tdecker@andrew.cmu.edu  \hspace*{.5cm} U.S. Citizen\\
+}
+\end{center}
+\end{textblock}
+
+%\begin{textblock}{5}(4,.4)
+%412.266.1743   tdecker@andrew.cmu.edu\\
+%1109 greenridge lane pittsbrugh pa 15220
+%\end{textblock}
+
+\addtolength{\topmargin}{1in}
+\pagestyle{empty} %removes page number
+\-\
+\vspace*{-1.8cm}
+\Heading{Education} \\[.6em]
+%
+%\-\ \\
+\vspace*{-.2cm}
+\point{Carnegie Mellon University (CMU), Pittsburgh, PA}
+\subpoint{Master of Science in Electrical Computer Engineering (May 2016)}
+%\subpoint{Masters of Science in Electrical Computer Engineering in Computer Science, Roboticsa and Business \Date{expect to graduate May 2016}}
+\subpoint{Bachelor of Science in Electrical Computer Engineering (May 2015)} 
+\subpointTwo{Minors in  Computer Science, Robotics, and Business Administration (May 2015)}
+%
+%
+%
+% decided to not include an objective 
+%&\text{Objective }&&\text{To obtain a fulltime position at a company that does cool important %things that matter where I can utilize my skills and passione in engineering and robotics to % work with a fun team to change the world.}\\[.5em]
+%
+%
+%Work Eperience
+\-\
+\vspace*{-.3cm}
+ \Heading{Work History \hspace*{12cm} Skills}\\
+% \vspace*{-1.1cm}
+%\begin{flushright}
+%{\large \textbf{Skills}}\\
+%\end{flushright}
+%\-\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%Amazon Prime Air
+\vspace*{-.1cm}
+\point{Amazon Prime Air Intern, Seattle WA   \Date{Summer 2015}}  
+\subpoint{Worked on computer vision and a real time embedded system for a new type of sensor}
+\subpoint{Team is applying for multiple patents based on my work on the project}
+\subpoint{Completed assigned internship project early, helped another intern finish a second project}
+%
+%
+\point{Research Assistant, CMU Field Robotics Center  \Date{2011 - 2015}}
+\subpoint{Assisted with software and hardware maintenance/development of 10+ robots} 
+\subpoint{Built multi-robot co-localization algorithms in low infrastructure environment}
+\subpoint{Developed Kalman filter and EKF for sensor fusion}
+\subpoint{Added vision system to robot to allow for automated initialization}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+ \point{CMU Introduction to Robotics TA \Date{Spring 2013, 2014, 2015}}
+ \subpoint{Co-created final lab for class of 2013}
+ \subpoint{Designed new Bayes filter localization lab; robots solve lost robot problem}
+ \subpoint{Taught localization/state estimation lecture for professor}
+ \subpoint{Helped write and grade midterms and finals - 2014 and 2015}
+%
+%
+%
+%Volkswagen
+\point{Volkswagen Electronics Research Lab Intern, Belmont CA \Date{Summer 2014}} 
+\subpoint{Developed scalable architecture for sensor extrinsic calibration verification}
+\subpoint{Upgraded legacy code to work with new system interface}
+\subpoint{Participated in and helped organize computer vision reading group}
+\subpoint{Won 3rd place at internal hackathon}
+%
+%
+%
+%
+%
+\point{CMU Introduction to Electrical and Computer Engineering TA \Date{Fall 2015}}
+\subpoint{Helped students during labs, graded student homework and exams}
+%
+%
+%
+%
+\vspace*{-.3cm}
+\Heading{Relevant Classes} \\[0em]
+%Mecatronics 
+ \point{Mechatronic Design \Date{Spring 2015}}
+ \subpoint{Received "Coolest Robot" award. Designed and built 5 degree of freedom robot to clean  skyscraper windows}
+ \subpoint{Implemented vision system which can localize robot relative to the window's frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-1cm}
+\begin{multicols}{2}
+\-\
+\point{Real Time Embedded Systems \Date{Fall 2014}}
+\subpoint{Designed working RTOS with priority inversion}
+%
+%
+\vspace*{-.2cm}
+\point{Embedded Controls \Date{Spring 2015}}
+\subpoint{Programmed stable inverted pendulum}
+%
+%
+\\ \-\ \\
+\point{Robot Kinematics And Dynamics \Date{Spring 2014}}
+\subpoint{Created Kalman filter vision system parameter estimator}
+%
+%
+%
+\vspace*{-.2cm}
+\point{Computer Vision \Date{Fall 2014}}
+\subpoint{Designed optical text recognition system}\\
+\end{multicols}
+%
+%
+%%
+%
+%
+%
+%
+%
+%Projects
+%
+%
+%RoboBuggy
+\-\ 
+\vspace*{-1.5cm}
+ \Heading{Activities}\\ 
+\point{Robotic Buggy \Date{2013 - Current}} 
+\subpoint{Creating a robot which can autonomously compete in a gravity race at CMU}
+\subpoint{Lead Software Team (manage 8+ people); Responsible for all software and firmware }
+\subpoint{Developed a scalable real time architecture for mapping,path planning, and localization}
+\subpoint{Wrote motion model and observation model for GPS, IMU, encoders, and cameras}
+\subpoint{Built computer vision road lane and building feature detectors to help extract robot's state}
+%
+%
+%
+\-\
+%%GOS
+\vspace*{-.2cm}
+ \point{Mentor, Girls Of Steel FIRST Robotics Team 3504 \Date{2011 - 2013}}
+ \subpoint{Mentored CMU sponsored robotics team of 40+ high school girls}
+ \subpoint{Mentored programmers, who won Regional Innovation in Control award}
+ \subpoint{Co-taught Java programming course for students}
+ \subpoint{Acted as a Resident Assistant for 30 visiting Chinese students during a 2 week camp (2013)}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%Apex
+%
+\vspace*{-.2cm}
+\point{Apex Buggy Team \Date{2011 - Current}}  
+\subpoint{Relay race at CMU with human driven carbon fiber carts built by students} 
+\subpoint{Co-founded team as a freshman (now has 40+ members), been an active member for 4+ years}
+%
+%
+%
+%
+%
+%
+%
+\vspace*{-.3cm}
+  \Heading{Distinctions}  \\[.6em]
+%\subpoint{Computer Technician, Diagnosed repaired computers for 650+ students (2009 - 2011)}
+\subpoint{Black Belt,Tang Soo Do Karate}
+\subpoint{Volunteer of the Year, Carnegie Science Center 200+ hours (2007)} 
+%
+%
+%
+%
+%
+%
+%
+% SKills
+%
+%
+\begin{textblock}{3}(11.4,3.5)
+\colorbox{myblue}
+{
+\begin{minipage}{5cm}
+\hspace{.25cm}
+\begin{minipage}{4.5cm}
+\vspace*{-1.1cm}
+\begin{flushleft}
+\textbf{Programming}\\
+\end{flushleft}
+\vspace*{-1.1cm}
+\begin{flushright}
+C   \score{4}{5}\\
+Matlab \score{4}{5}\\
+C++ \score{3}{5}\\
+Java \score{3}{5}\\
+Python \score{3}{5}\\
+Verilog \score{1}{5}\\
+HTML \score{2}{5} \\
+PHP \score{1}{5} \\
+SML \score{2}{5} \\
+\LaTeX \score{3}{5} \\
+\end{flushright}
+\vspace*{-0.5cm}
+%
+%
+\begin{flushleft}
+\textbf{Libraries} 
+\end{flushleft}
+\begin{flushright}
+\vspace*{-0.75cm}
+ROS \score{3}{5} \\
+Free RTOS \score{2}{5} \\
+OpenCV \score{2}{5}\\
+PCL \score{1}{5} \\
+\end{flushright}
+\vspace*{-.5cm}
+%
+%
+\begin{flushleft}
+\textbf{Software} \\
+\end{flushleft}
+\begin{flushright}
+\vspace*{-.75cm}
+Linux \score{3}{5}\\
+Adobe Premiere \score{2}{5}\\
+SolidWorks \score{3}{5}\\
+\end{flushright}
+\-\
+%
+%
+\vspace*{-0.75cm}
+\begin{flushleft}
+\textbf{Mechanical} \\
+\end{flushleft}
+\begin{flushright}
+\vspace*{-.75cm}
+Mill \score{3}{5}\\
+Lathe \score{2}{5}\\
+3d Printer \score{3}{5}\\
+Laser cutter \score{2}{5}\\
+Carbon Fiber \score{1}{5}\\
+\end{flushright}
+\end{minipage}
+\end{minipage}}
+\end{textblock}
+%
+%
+%
+%
+\begin{textblock}{6}(11,11.5)
+\begin{figure}
+Scan to see some of my work\\
+    \centering
+\includegraphics[width=4cm]{qr}\\
+http://trevordecker.github.io/\\Resume/index.html\\
+\end{figure}
+\end{textblock}
+%
+%
+% total page overlay
+%
+%
+%\begin{textblock}{3}(-.4,0)
+%\begin{tikzpicture}
+%      \draw [ultra thick, draw=black, fill=red, opacity=0.0]
+%	  (0in,0in) --     
+%      (0in,-11.5in) --
+%      (8.5in,-11.5in) --     
+%      (8.5in,0in) --
+%      cycle;
+%\end{tikzpicture}
+%\end{textblock}
+%
+%
+% Printable area overlay
+%
+%  THis section is for making sure that the entrie document is in the printable region
+%
+\begin{textblock}{3}(-.4,0)
+\begin{tikzpicture}
+      \draw [ultra thick, draw=black, fill=blue, opacity=0.0]
+	  (0in,0in) 
+	  (.15in,-.22in)-- 
+      (.15in,-10.82in) --
+      (8.35in,-10.82in) --
+      (8.35in,-.22in) --
+      cycle;
+\end{tikzpicture}
+\end{textblock}
+% half way mark
+%
+%
+\begin{textblock}{3}(-.4,0)
+\begin{tikzpicture}
+      \draw [ultra thick, draw=black, fill=yellow, opacity=0.0]
+	  (0in,0in) 
+	  (0in,-.22in)-- 
+      (0in,-10.82in) --
+      (4.25in,-10.82in) --
+      (4.25in,-.22in) --
+      cycle;
+\end{tikzpicture}
+\end{textblock}
+% line deviding skills
+\begin{textblock}{3}(11.5,2.75)
+\begin{tikzpicture}
+      \draw [ultra thick, draw=black, fill=yellow, opacity=1.0]
+	  (0in,0in)  --
+	  (0in,4.11in) --
+      cycle;
+\end{tikzpicture}
+\end{textblock}
+\end{document}
