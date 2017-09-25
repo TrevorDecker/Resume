@@ -36,7 +36,7 @@
 %todo add a second line for subpoints
 \newcommand{\subpointTwo}[1]{\-\hspace{.65cm} #1\\[0em]}
 \newcommand{\Date}[1]{ \text{\fontsize{9pt}{12pt}\selectfont (#1)}}
-\newcommand{\RighSideHeading}[1]{\vspace{-2em}\begin{center}\textbf{#1}\end{center}\vspace{-.5em}}
+\newcommand{\RighSideHeading}[1]{\vspace{-2em}\begin{center}\textbf{#1}\end{center}\vspace{-1em}}
 \newcommand{\Heading}[1]{\\{\large \textbf{#1}\\[-.5em]  \rule{20cm}{.1cm} \- \vspace{-.25cm}}}
 \newcommand\score[2]{
 \hspace*{-.5cm}
@@ -81,24 +81,27 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 %
 %Work Eperience
 \-\
-\vspace*{-2cm}
+\vspace*{-1.5cm}
  \Heading{Employment History}\\
 %
 %
 %%%%%%%%%% Apple %%%%%%%%%%%%%
 %
 % 
- \point{Robotics Engineer, Apple Special Projects Group \Date{2016 - 2017}} 
- \subpoint{Developed a patent pending high fidelity Lidar simulator to accelerate sensor fusion development}
- \subpoint{Created low cost  multimodal modular distributed embedded system for long term traffic monitoring}    
- \subpoint{bundel adjustor}
- \subpoint{otherstuff ICP,ML}
+ \point{Robotics Engineer, Apple Special Projects Group \Date{2016 - Present}} 
+ \subpoint{Created bundle adjustment and SLAM pipelines for high definition map creation}
+ % map ground truth evaluation}
+ \subpoint{Developed a patent pending high fidelity rolling shutter LiDAR simulation} %accelerate sensor fusion development}
+ \subpoint{Created low cost  multimodal modular distributed embedded traffic monitoring system}    
+% \subpoint{Explored GAN, Reinforcment learning, and Deep learning for Map Evaluation}
+ \subpoint{Mentored team intern on reinforcement learning project}
+ %\subpoint{Visual Attention project}
  %
  %
  %%%%%%%%%%%%%% FRC %%%%%%%%%%%%%
  %
  %
-\point{Research Assistant, CMU Field Robotics Center  \Date{2011 - Current}}
+\point{Research Assistant, CMU Field Robotics Center  \Date{2011 - 2016}}
 \subpoint{Assisted with software and hardware maintenance/development of 10+ robots} 
 \subpoint{Built multi-robot co-localization algorithms in low infrastructure environment}
 \subpoint{Developed Kalman filter and EKF for sensor fusion}
@@ -111,9 +114,9 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 %Amazon Prime Air
 \vspace*{-.1cm}
 \point{Intern, Amazon Prime Air  \Date{Summer 2015}}  
-\subpoint{Worked on computer vision and a real time embedded system for a new type of sensor}
+\subpoint{Worked on computer vision and a real time embedded system for sensors team}
 \subpoint{Team is applying for multiple patents based on my work on the project}
-\subpoint{Completed assigned internship project early, helped another intern finish a second project}
+\subpoint{Completed  internship project early, helped another intern finish a second project}
 %
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,18 +126,16 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 \point{Intern, Volkswagen Electronics Research Laboratory \Date{Summer 2014}} 
 \subpoint{Developed scalable architecture for sensor extrinsic calibration verification}
 \subpoint{Upgraded legacy code to work with new system interface}
-\subpoint{Participated in and helped organize Computer Vision reading group}
-\subpoint{Won 3rd place at internal hackathon}
+\subpoint{Participated in and helped organize computer vision reading group}
 %
 %
 %
 %
 %
- \point{Introduction to robotics TA \Date{Spring 2013,2014,2015}}
- \subpoint{Co-created final lab for class 2013}
- \subpoint{Designed new bayes filter localization lab, robots solve the lost robot problem}
+ \point{Introduction to robotics TA \Date{Spring 2013 - 2016}}
+ \subpoint{2016 lead teaching assistant, managed team of 12 TAs, wrote exams}
+ \subpoint{Designed new Bayes filter localization lab, robots solve the lost robot problem}
  \subpoint{Taught localization/state estimation lecture for professor}
- \subpoint{Helped write and grade midterm/final 2014,2015}
 %
 %
 %
@@ -146,46 +147,66 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 %
 %
 \vspace*{-.1cm}
-\Heading{Education} \\[.6em]
+\Heading{Education and Relevant Classes} \\[.6em]
 %
 %\-\ \\
 \vspace*{-.2cm}
 \point{Carnegie Mellon University (CMU), Pittsburgh, PA}
-\subpoint{Masters of Science in Electrical Computer Engineering expect to graduate May 2016}
+\subpoint{Masters of Science in Electrical Computer Engineering (ECE) (May 2016)}
 %\subpoint{Masters of Science in Electrical Computer Engineering in Computer Science, Roboticsa and Business \Date{expect to graduate May 2016}}
-\subpoint{Bachelors of Science in Electrical Computer Engineering with minors in  Computer Science, Robotics, and Business}
-\subpointTwo{Administration (2015)}
+\subpoint{Bachelors of Science in ECE with minors in  Computer Science, Robotics, and Business Administration (2015)}
 %
 %
 %
-\vspace*{-.3cm}
-\Heading{Relavent Classes} \\[0em]
-%Mecatronics 
- \point{Mecatronic Design \Date{Spring 2015}}
- \subpoint{Received Coolest Robot award, Designed/built 5 degree of freedom robot to clean  skyscrapper windows}
- \subpoint{Implemented vision system which can locilise robot relative to the windows frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-1cm}
 \begin{multicols}{2}
 \-\
-\point{Real Time Embedded Systems \Date{Fall 2014}}
+\point{Robot Kinematics Dynamics and Controls }
+\subpoint{Created Kalman filter for vision system parameter estimation}
+% \subpoint{Implemented vision system which can localize robot relative to the windows frame}
+ %
+ %
+ %
+ \vspace*{-.2cm}
+ \point{Mecatronic Design }
+ \subpoint{Won "Coolest Robot" award for  skyscrapper window cleaner}
+%
+%
+%
+\vspace*{-.2cm}
+\point{Statistical Techniques in Robotics}
+\subpoint{Used Reinforcement learning for AI to play Mario Kart clone}
+%
+%
+%
+\vspace*{-.2cm}
+\point{Parallel Computer Architecture and Programming}
+\subpoint{Developed Vision system for GPU based road segmentation}\\
+%
+%
+%
+%\vspace*{-.2cm}
+\point{Real Time Embedded Systems }
 \subpoint{Designed working RTOS with priority inversion}
 %
 %
+%
 \vspace*{-.2cm}
-\point{Embedded Controls \Date{Spring 2015}}
+\point{Computer Vision }
+\subpoint{Designed optical text recognition system}
+%
+%
+%
+\vspace*{-.2cm}
+\point{Embedded Controls }
 \subpoint{Programmed stable inverted pendulum}
 %
 %
-\\ \-\ \\
-\point{Robot Kinematics And Dynamics \Date{Spring 2014}}
-\subpoint{Created kalman filter for vision system parameter estimation}
-%
-%
 %
 \vspace*{-.2cm}
-\point{Computer Vision \Date{Fall 2014}}
-\subpoint{Designed optical text recognition system}\\
+\point{Distributed Embedded Systems}
+\subpoint{Developed safety critical elevator control system}
 \end{multicols}
 %
 %
@@ -201,33 +222,30 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 %
 \-\
 %%GOS
-\vspace*{-1.5cm}
+\vspace*{-1.0cm}
  \Heading{Activities}\\
- \point{Mentor, Girls Of Steel FIRST Robotics Team 3504 \Date{2011 - 2013}}
- \subpoint{Mentored CMU sponsored robotics team of 40+ high school girls}
- \subpoint{Mentored programmers, who won Regional Innovation in Control award}
- \subpoint{Co-taught Java programming course for students}
- \subpoint{Acted as a Resident Assistant for 30 visiting Chinese students during a 2 week camp (2013)}
-
+\point{Robotic Buggy \Date{2013 - 2016}} 
+\subpoint{Creating a robot which can autonomously compete in a gravity race at CMU}
+\subpoint{Lead Software Team (manage 8+ people) Responsible for all software and firmware }
+\subpoint{Developed a scalable real time architecture for mapping, path planning, and localization}
+\subpoint{Wrote motion model and observation model for GPS, IMU, encoders, cameras, ...}
+\subpoint{Built computer vision road lane and building feature detectors to help extract robot's state}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %RoboBuggy
-\-\ 
-\vspace*{-.5cm} 
-\point{Robotic Buggy \Date{2013 - Current}} 
-\subpoint{Creating a robot which can autonomously compete in a gravity race at CMU}
-\subpoint{Lead Software Team (manage 8+ people) Responsible for all software and firmware }
-\subpoint{Developed a scalable real time architecture for mapping,path planning, and localization}
-\subpoint{Wrote motion model and observation model for GPS, IMU, encoders, cameras, ...}
-\subpoint{Built computer vision road lane and building feature detectors to help extract robots state}
+\vspace*{0cm} 
+ \point{Mentor, Girls Of Steel FIRST Robotics Team 3504 \Date{2011 - 2013}}
+ \subpoint{Mentored CMU sponsored robotics team of 40+ high school girls}
+ \subpoint{Co-taught Java programming course for students}
+ \subpoint{Acted as a Resident Assistant for 30 visiting Chinese students during a 2 week camp (2013)}
 %
 %Apex
 %
 \vspace*{-.2cm}
-\point{Apex Buggy Team \Date{2011 - Current}}  
+\point{Apex Buggy Team \Date{2011 - 2016}}  
 \subpoint{Relay race at CMU with human driven carbon fiber carts built by students} 
-\subpoint{Co-founded team as a freshman (now has 40+ members), been an active member for 4+ years}
+\subpoint{Co-founded team as a freshman (now has 40+ members), was an active member for 5 years}
 %
 %
 %
@@ -237,10 +255,10 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 %
 \vspace*{-.3cm}
   \Heading{Distinctions}  \\[.6em]
-  \subpoint{1st place Apple Maps Emerging technology Reinforcement Learning Challenge 2017}
-\subpoint{Computer Technician, Diagnosed repaired computers for 650+ students (2009 - 2011)}
+  \subpoint{1st place Apple maps emerging technology reinforcement learning challenge 2017}
+\subpoint{Computer technician: diagnosed and repaired computers for 650+ students (2009 - 2011)}
 \subpoint{Black Belt,Tang Soo Do Karate}
-\subpoint{Volunteer of the Year,Carnegie Science Center 200+ hours (2007)} 
+%\subpoint{Volunteer of the Year, Carnegie Science Center 200+ hours (2007)} 
 %
 %
 %
@@ -257,18 +275,17 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 \begin{minipage}{6cm}
 \hspace{.25cm}
 \begin{minipage}{5.5cm}
-\vspace*{-1.1cm}
+\vspace*{-0.55cm}
 \begin{flushleft}
 \textbf{Programming}\\
 \end{flushleft}
 \vspace*{-1.1cm}
 \begin{flushright}
-Matlab \score{5}{5}\\
+Matlab \score{4}{5}\\
 C   \score{4}{5}\\
-C++ \score{3.5}{5}\\
+C++ \score{4}{5}\\
 Java \score{4}{5}\\
 Python \score{3}{5}\\
-Verilog \score{1}{5}\\
 HTML \score{3}{5} \\
 PHP \score{2}{5} \\
 JavaScript \score{2}{5}\\
@@ -286,7 +303,9 @@ LaTex \score{3}{5} \\
 ROS \score{3}{5} \\
 Free RTOS \score{2}{5} \\
 OpenCV \score{2}{5}\\
-PCL \score{1}{5} \\
+PCL \score{3}{5} \\
+TensorFlow \score{3}{5}\\
+G2o \score{4}{5} \\
 \end{flushright}
 \vspace*{-.5cm}
 %
@@ -319,17 +338,17 @@ Carbon Fiber \score{2}{5}\\
 \end{minipage}}
 \end{textblock}
 %
+%  
 %
 %
-%
-\begin{textblock}{6}(11,11.5)
-\begin{figure}
-Scan to see some of my work\\
-    \centering
-\includegraphics[width=4cm]{qr}\\
-http://tinyurl.com/tdecker\\
-\end{figure}
-\end{textblock}
+%\begin{textblock}{6}(11,14.0)
+%\begin{figure}
+%Scan to see some of my work\\
+%    \centering
+%%\includegraphics[width=4cm]{qr}\\
+%http://tinyurl.com/tdecker\\
+%\end{figure}
+%\end{textblock}
 %
 %
 % total page overlay
