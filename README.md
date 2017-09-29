@@ -2,4 +2,6 @@ Resume
 ======
 
 My Resume
-This portion of the git repo should be private 
+
+A webpage about me can be found at http://trevordecker.github.io/Resume/ 
+
