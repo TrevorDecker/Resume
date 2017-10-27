@@ -39,16 +39,20 @@
 \newcommand{\RighSideHeading}[1]{\vspace{-2em}\begin{center}\textbf{#1}\end{center}\vspace{-1em}}
 \newcommand{\Heading}[1]{\\{\large \textbf{#1}\\[-.5em]  \rule{20cm}{.1cm} \- \vspace{-.25cm}}}
 \newcommand\score[2]{
-\hspace*{-.5cm}
-\pgfmathsetmacro\pgfxa{#1+1}
-\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw,inner sep=1.3pt,anchor=outer point 3]
-  \begin{tikzpicture}[baseline]
-    \foreach \i in {1,...,#2} {
-    \pgfmathparse{(\i<=#1?"gray":"white")}%(\i<=#1?"yellow":"gray")}
-    \edef\starcolor{\pgfmathresult}
-    \draw (\i*1.75ex,0) node[name=star\i,scorestars,fill=\starcolor]  {};
-   }
-  \end{tikzpicture}
+\hspace*{0cm}
+\begin{tikzpicture}
+\draw [fill=white] (0,0) rectangle (1.0,.25);
+\draw [fill={rgb:red,0;green,2;blue,0}] (0,0) rectangle (#1,.25);
+\end{tikzpicture} \\
+%\pgfmathsetmacro\pgfxa{#1+1}
+%\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw,inner %sep=1.3pt,anchor=outer point 3]
+ % \begin{tikzpicture}[baseline]
+ %   \foreach \i in {1,...,#2} {
+  % \pgfmathparse{(\i<=#1?"gray":"white")}%(\i<=#1?"yellow":"gray")}
+  %  \edef\starcolor{\pgfmathresult}
+   % \draw (\i*1.75ex,0) node[name=star\i,scorestars,fill=\starcolor]  {};
+   %}
+ % \end{tikzpicture}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%% begin document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,7 +95,7 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
  \point{Robotics Engineer, Apple Special Projects Group \Date{2016 - Present}} 
  \subpoint{Created bundle adjustment and SLAM pipelines for high definition map creation}
  % map ground truth evaluation}
- \subpoint{Developed a patent pending high fidelity rolling shutter LiDAR simulation} %accelerate sensor fusion development}
+ \subpoint{Developed a patent pending high fidelity rolling shutter LiDAR simulator} %accelerate sensor fusion development}
  \subpoint{Created low cost  multimodal modular distributed embedded traffic monitoring system}    
 % \subpoint{Explored GAN, Reinforcment learning, and Deep learning for Map Evaluation}
  \subpoint{Mentored team intern on reinforcement learning project}
@@ -101,7 +105,7 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
  %%%%%%%%%%%%%% FRC %%%%%%%%%%%%%
  %
  %
-\point{Research Assistant, CMU Field Robotics Center  \Date{2011 - 2016}}
+\point{Research Assistant, Carnegie Mellon University Field Robotics Center  \Date{2011 - 2016}}
 \subpoint{Assisted with software and hardware maintenance/development of 10+ robots} 
 \subpoint{Built multi-robot co-localization algorithms in low infrastructure environment}
 \subpoint{Developed Kalman filter and EKF for sensor fusion}
@@ -115,7 +119,7 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 \vspace*{-.1cm}
 \point{Intern, Amazon Prime Air  \Date{Summer 2015}}  
 \subpoint{Worked on computer vision and a real time embedded system for sensors team}
-\subpoint{Team is applying for multiple patents based on my work on the project}
+\subpointTwo{Team applied for multiple patents based on my work on the project}
 \subpoint{Completed  internship project early, helped another intern finish a second project}
 %
 %
@@ -126,15 +130,15 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 \point{Intern, Volkswagen Electronics Research Laboratory \Date{Summer 2014}} 
 \subpoint{Developed scalable architecture for sensor extrinsic calibration verification}
 \subpoint{Upgraded legacy code to work with new system interface}
-\subpoint{Participated in and helped organize computer vision reading group}
+\subpoint{Helped organize and participated in computer vision reading group}
 %
 %
 %
 %
 %
- \point{Introduction to robotics TA \Date{Spring 2013 - 2016}}
+ \point{Introduction to Robotics TA, CMU \Date{Spring 2013 - 2016}}
  \subpoint{2016 lead teaching assistant, managed team of 12 TAs, wrote exams}
- \subpoint{Designed new Bayes filter localization lab, robots solve the lost robot problem}
+ \subpoint{Designed new Bayes filter localization lab, where students solve the lost robot problem}
  \subpoint{Taught localization/state estimation lecture for professor}
 %
 %
@@ -151,7 +155,7 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 %
 %\-\ \\
 \vspace*{-.2cm}
-\point{Carnegie Mellon University (CMU), Pittsburgh, PA}
+\point{Carnegie Mellon University, Pittsburgh, PA}
 \subpoint{Masters of Science in Electrical Computer Engineering (ECE) (May 2016)}
 %\subpoint{Masters of Science in Electrical Computer Engineering in Computer Science, Roboticsa and Business \Date{expect to graduate May 2016}}
 \subpoint{Bachelors of Science in ECE with minors in  Computer Science, Robotics, and Business Administration (2015)}
@@ -169,7 +173,7 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
  %
  %
  \vspace*{-.2cm}
- \point{Mecatronic Design }
+ \point{Mechatronic Design }
  \subpoint{Won "Coolest Robot" award for  skyscrapper window cleaner}
 %
 %
@@ -226,7 +230,7 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
  \Heading{Activities}\\
 \point{Robotic Buggy \Date{2013 - 2016}} 
 \subpoint{Creating a robot which can autonomously compete in a gravity race at CMU}
-\subpoint{Lead Software Team (manage 8+ people) Responsible for all software and firmware }
+\subpoint{Led Software Team (managed 8+ people) Responsible for all software and firmware }
 \subpoint{Developed a scalable real time architecture for mapping, path planning, and localization}
 \subpoint{Wrote motion model and observation model for GPS, IMU, encoders, cameras, ...}
 \subpoint{Built computer vision road lane and building feature detectors to help extract robot's state}
@@ -235,7 +239,7 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 %
 %RoboBuggy
 \vspace*{0cm} 
- \point{Mentor, Girls Of Steel FIRST Robotics Team 3504 \Date{2011 - 2013}}
+ \point{Mentor, CMU Girls Of Steel FIRST Robotics Team 3504 \Date{2011 - 2013}}
  \subpoint{Mentored CMU sponsored robotics team of 40+ high school girls}
  \subpoint{Co-taught Java programming course for students}
  \subpoint{Acted as a Resident Assistant for 30 visiting Chinese students during a 2 week camp (2013)}
@@ -277,62 +281,62 @@ Cell: 412-266-1743  \hspace*{.5cm} email: Mr.Trevor.Decker@gmail.com  \hspace*{.
 \begin{minipage}{5.5cm}
 \vspace*{-0.55cm}
 \begin{flushleft}
-\textbf{Programming}\\
+\textbf{Programming:}\\
 \end{flushleft}
 \vspace*{-1.1cm}
 \begin{flushright}
-Matlab \score{4}{5}\\
-C   \score{4}{5}\\
-C++ \score{4}{5}\\
-Java \score{4}{5}\\
-Python \score{3}{5}\\
-HTML \score{3}{5} \\
-PHP \score{2}{5} \\
-JavaScript \score{2}{5}\\
-SML \score{2}{5} \\
-LaTex \score{3}{5} \\
+Matlab \score{.8}\\
+C   \score{.7}\\
+C++ \score{.75}\\
+Java \score{.7}\\
+Python \score{.6}\\
+HTML \score{.6} \\
+JavaScript \score{.4}\\
+SML \score{.5} \\
+LaTex \score{.75} \\
 \end{flushright}
 \vspace*{-0.5cm}
 %
 %
 \begin{flushleft}
-\textbf{Libraries} 
+\textbf{Libraries:} 
 \end{flushleft}
 \begin{flushright}
 \vspace*{-0.75cm}
-ROS \score{3}{5} \\
-Free RTOS \score{2}{5} \\
-OpenCV \score{2}{5}\\
-PCL \score{3}{5} \\
-TensorFlow \score{3}{5}\\
-G2o \score{4}{5} \\
+ROS \score{.75} \\
+Free RTOS \score{.5} \\
+OpenCV \score{.75}\\
+PCL \score{.8} \\
+TensorFlow \score{.5}\\
 \end{flushright}
 \vspace*{-.5cm}
 %
 %
 \begin{flushleft}
-\textbf{Software} \\
+\textbf{Software:} \\
 \end{flushleft}
 \begin{flushright}
 \vspace*{-.75cm}
-linux \score{3}{5}\\
-Adobe Premiere \score{2}{5}\\
-SolidWorks \score{3}{5}\\
+linux \score{.75}\\
+Docker \score{.75}\\
+Gazebo \score{.6}\\
+Adobe Premiere \score{.5}\\
+SolidWorks \score{.5}\\
 \end{flushright}
 \-\
 %
 %
 \vspace*{-0.75cm}
 \begin{flushleft}
-\textbf{Mechanical} \\
+\textbf{Mechanical:} \\
 \end{flushleft}
 \begin{flushright}
 \vspace*{-.75cm}
-Mill \score{3}{5}\\
-Lathe \score{2}{5}\\
-3d printer \score{4}{5}\\
-Laser cutter \score{3}{5}\\
-Carbon Fiber \score{2}{5}\\
+Mill \score{.5}\\
+Lathe \score{.5}\\
+3d printer \score{.75}\\
+Laser cutter \score{.75}\\
+Carbon Fiber \score{.5}\\
 \end{flushright}
 \end{minipage}
 \end{minipage}}
@@ -341,14 +345,15 @@ Carbon Fiber \score{2}{5}\\
 %  
 %
 %
-%\begin{textblock}{6}(11,14.0)
-%\begin{figure}
-%Scan to see some of my work\\
-%    \centering
-%%\includegraphics[width=4cm]{qr}\\
-%http://tinyurl.com/tdecker\\
-%\end{figure}
-%\end{textblock}
+\begin{textblock}{6}(10.75,11.5)
+\begin{figure}
+ \centering
+ Scan to see some of my work\\
+    \includegraphics[width=4cm]{qrcode}\\
+\scriptsize	
+    http://trevordecker.github.io/Resume\\
+\end{figure}
+\end{textblock}
 %
 %
 % total page overlay
