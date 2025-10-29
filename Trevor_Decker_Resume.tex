@@ -1,0 +1,344 @@
+\documentclass[12pt]{article}
+\usepackage[letterpaper, top=2.5cm, left=1cm, right=1cm, bottom=2cm]{geometry}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}  % Used to get the total number of pages
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.10}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{calc}
+\usepackage[absolute]{textpos}
+%\usepackage[cm]{fullpage}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{fix-cm}
+\usepackage{calc}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{xstring}
+\usetikzlibrary{shapes.geometric,calc}
+\fboxsep0pt %to avoid the extra padding around the minipage
+\definecolor{headerbg}{HTML}{727aa1}
+% 3. Clear any default header and footer settings
+\fancyhf{}
+% draw a rectangle behind the header
+\AddToHook{shipout/background}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[headerbg] (current page.north west)
+      rectangle ([yshift=-2.5cm]current page.north east);
+  \end{tikzpicture}%
+}
+% 4. Define the right footer (\rfoot)
+%    \thepage prints the current page number
+%    \pageref{LastPage} prints the total number of pages
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+
+\rhead{%
+  \begin{minipage}[t]{0.31\textwidth} % right half
+  \vspace{-3.0cm}
+    \color{white}%
+    \vspace{0pt} % top-align minipage
+    Cell: (412) 266-1743\\
+    %\includegraphics[height=1em]{email2.png}
+     \href{mailto:Mr.Trevor.Decker@gmail.com}{Mr.Trevor.Decker@gmail.com}\\  
+    \href{https://linkedin.com/in/trevor-decker}{\includegraphics[height=1em]{linkedin.png} linkedin.com/in/trevor-decker}
+  \end{minipage}%
+}
+\lhead{
+%\begin{center}
+{
+\color{white}%
+\vspace{1.2cm}
+\fontsize{40}{40}\selectfont
+ Trevor Decker}\\
+%\end{center}
+}
+
+% --- REMOVE THE HEADER LINE WITH THIS COMMAND ---
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+\definecolor{myblue}{rgb}{1,1,1}%{.8, 1, 1}
+\setcounter{secnumdepth}{-1} %removes section numbers 
+\newcommand{\EndLine}{ \\[0em]}
+%
+% This command causes for the program to compile super slowly like never finish slow
+%\newcommand{\firstLetterUpper}[1]{
+%\uppercase{\StrLeft{#1}{1}}
+%\StrGobbleLeft{#1}{1}
+%}
+%
+%
+\newcommand{\point}[1]{\\[-.5em] \textbf{\fontsize{14pt}{13pt}\selectfont #1} \\[0em]}
+\newcommand{\subpoint}[1]{\-\hspace{.2cm}  $\bullet$ \-\hspace{.05cm} #1\\[0em]}
+%todo add a second line for subpoints
+\newcommand{\subpointTwo}[1]{\-\hspace{.65cm} #1\\[0em]}
+\newcommand{\Date}[1]{ \text{\fontsize{12pt}{12pt}\selectfont #1}}
+\newcommand{\Location}[1]{ \text{\fontsize{9pt}{9pt}\selectfont #1}}
+\newcommand{\RighSideHeading}[1]{\vspace{-2em}\begin{center}\textbf{#1}\end{center}\vspace{-1em}}
+\newcommand{\Heading}[1]{\\{\large \textbf{#1}\\[-.5em]  \rule{20cm}{.1cm} \- \vspace{-.25cm}}}
+\newcommand\score[2]{
+\hspace*{0cm}
+\begin{tikzpicture}
+\draw [fill=white] (0,0) rectangle (1.0,.25);
+\draw [fill={rgb:red,0;green,2;blue,0}] (0,0) rectangle (#1,.25);
+\end{tikzpicture} \\
+%\pgfmathsetmacro\pgfxa{#1+1}
+%\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw,inner %sep=1.3pt,anchor=outer point 3]
+ % \begin{tikzpicture}[baseline]
+ %   \foreach \i in {1,...,#2} {
+  % \pgfmathparse{(\i<=#1?"gray":"white")}%(\i<=#1?"yellow":"gray")}
+  %  \edef\starcolor{\pgfmathresult}
+   % \draw (\i*1.75ex,0) node[name=star\i,scorestars,fill=\starcolor]  {};
+   %}
+ % \end{tikzpicture}
+}
+\fontsize{12pt}{12pt}\selectfont
+\input{Employment.tex}
+\input{Education.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% begin document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%
+%\begin{textblock}{9}(12.3,0.4)
+%\begin{flushleft}
+%Cell: 412-266-1743\\
+%U.S. Citizen 
+%\end{flushleft}
+%\end{textblock}
+%%
+%\begin{textblock}{9}(0.75,0.4)
+%\begin{flushleft}
+%{\fontsize{9}{9}\selectfont
+%\includegraphics[height=1em]{email2.png} Mr.Trevor.Decker@gmail.com\\  
+%\includegraphics[height=1em]{linkedin.png} linkedin.com/in/trevor-decker\\
+%}
+%\end{flushleft}
+%\end{textblock}
+%
+\-\
+%\begin{textblock}{13}(1.7,14.8)
+%\begin{center}
+%\fontsize{9}{9}\selectfont
+%412.266.1743 \hspace{1cm}
+%\href{mailto:Mr.Trevor.Decker@gmail.com}{\includegraphics[height=1em]{email2.png} Mr.Trevor.Decker@gmail.com} \hspace{1cm}
+%\href{https://linkedin.com/in/Trevor-Decker}{\includegraphics[height=1em]{linkedin.png} linkedin.com/in/trevor-decker} \hspace{1cm}
+%%U.S. Citizen 
+%%1109 greenridge lane pittsbrugh pa 15220
+%\end{center}
+%\end{textblock}
+%\addtolength{\topmargin}{1in}
+% decided to not include an objective 
+%&\text{Objective }&&\text{To obtain a fulltime position at a company that does cool important %things that matter where I can utilize my skills and passione in engineering and robotics to % work with a fun team to change the world.}\\[.5em]
+%
+{
+\vspace*{-0.1cm}
+\Heading{Summary}
+{
+\vspace*{-0.20cm}
+\fontsize{12}{110}\selectfont
+\\
+%Executive level manager with 20 years of corporate and technical leadership experience
+% • History of delivering key technical solutions in mission critical environments
+% • Proven track record of technical leadership in large scale, multi-site and cross-functional teams
+% • Ability to grow and scale teams and departments with a culture based on ownership and delivery
+%• 20 years developing strategic and tactical partnerships to augment innovation and delivery
+%• Seven years in startup environments managing fast pace and rapidly evolving development teams
+A results driven robotisits with management experience in fast-paced startups. I specialize in leading autonomous systems projects from conception to real-world deployment effectively balancing evolving requirements with proactive risk mitigation in iterative development cycles%Has led cross-functional teams to ship reliable, high-performance systems
+% in fast-moving, resource-constrained environments.
+}
+\vspace*{-0.3cm}
+}
+%
+%Work Eperience
+\-\
+\Work
+%
+\vspace*{-.2cm}
+\Education
+%\newpage
+%Projects
+%
+%
+%
+\-\
+%%GOS
+ \Heading{Activities}\\
+ \vspace*{-0.5cm}
+\point{Robotic Buggy \hfill \Date{2013 - 2016\hspace{.35cm}}} 
+Created an autonomous robot which can compete in a traditionally human only gravity race at CMU\\
+\subpoint{Led a cross-functional team of eight engineers, planning all development and testing activities}
+\subpoint{Made feature trade-offs to guarantee success during the robot’s single allotted time slot.}
+\subpoint{Developed a scalable real time architecture for mapping, path planning, and localization}
+\subpoint{Wrote motion model and observation model for GPS, IMU, encoders, cameras, ...}
+\subpoint{Built computer vision road lane and feature detectors to help extract robot's state}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%RoboBuggy
+\vspace*{0cm} 
+ %\point{Mentor, CMU Girls Of Steel FIRST Robotics Team 3504 \Date{2011 - 2013}}
+ %\subpoint{Mentored CMU sponsored robotics team of 40+ high school girls}
+ %\subpoint{Co-taught Java programming course for students}
+ %\subpoint{Resident Assistant for 30 visiting Chinese students during a 2 week camp in 2013}
+%
+%Apex
+%
+%\vspace*{-.2cm}
+%\point{Apex Buggy Team \Date{2011 - 2016}}  
+%\subpoint{Relay race at CMU with human driven carbon fiber carts built by students} 
+%\subpoint{Co-founded team as a freshman (now has 40+ members), was an active member for 5 years}
+%
+%
+%
+%
+%
+%
+%
+\vspace*{0cm}
+  \Heading{Distinctions}  \\[.6em]
+  \subpoint{patents US9823089 and US10302452B1 for online drone calibration}
+  \subpoint{1st place 2017 Apple maps emerging technology reinforcement learning competition}
+\subpoint{Computer technician: diagnosed and repaired 650+ laptop computers for school students (2009 - 2011)}
+\subpoint{Black Belt,Tang Soo Do Karate}
+ \subpoint{Won "Coolest Robot" award for  skyscrapper window cleaner CMU Mechatronics 2016}	
+ \subpoint{FIRST Robotics 3 years high school participant, 2 years mentor}
+%\subpoint{Volunteer of the Year, Carnegie Science Center 200+ hours (2007)} 
+%
+%
+%
+%
+\\
+\vspace*{-.6cm}
+\Heading{Skills and Experience}  \\[.6em] 
+\textbf{Software:} \\
+\hspace*{1cm} Python*, C, C++*, JavaScript, React, Jira*, SQL*, Ansible, Terraform*, Docker*, Nomad*, Buildkite*\\
+\hspace*{1cm} Kubernetes, Bazel*, Java, ROS \\
+\textbf{Robotics Experiences} \\
+\hspace*{1cm} Localization, Mapping, Calibration*, Sensor Fusion*, Simulation*, Autonomous Vehicles*\\
+\textbf{Hardware}\\
+\hspace*{1cm} 3d Printing, Mill, Lath, Carbon Fiber layup, Electronic assembly, Solid Works/Cad \\
+\textbf{Other}\\
+\hspace*{1cm} Jira*, Team Management*, Project Planning*, Forklift Certified*, Release Management*\\
+{\begin{flushright} *Used in current role \end{flushright}}
+%\Heading{Contact}  \\[.6em]
+%Cell: (412) 266-1743\\
+%\includegraphics[height=1em]{email2.png} Mr.Trevor.Decker@gmail.com\\  
+%\includegraphics[height=1em]{linkedin.png} linkedin.com/in/trevor-decker\\
+%
+%
+%
+% SKills
+%
+%
+%\begin{textblock}{3}(10.75,1.85)
+%\colorbox{myblue}
+%{
+%\begin{minipage}{6cm}
+%\hspace{.25cm}
+%\begin{minipage}{5.5cm}
+%\begin{flushright}
+%\vspace*{-0.45cm}
+%\textbf{Daily Use:}\\
+%C++ 9 years\\
+%Python 11 years\\
+%ROS 9 years\\
+%Ceres 2 year\\
+%PCL 5 years \\
+%Ubuntu 9 years\\
+%Docker 3 years\\
+%%
+%%
+%\textbf{Past Use:} \\
+%OpenCV 8 years\\
+%Matlab 6 years\\
+%C   7 years\\
+%Java 5 years\\
+%HTML 4  years\\
+%LaTex 4 years \\
+%Gazebo 3 years\\
+%SolidWorks 5 years\\
+%JavaScript 2 years\\
+%%
+%% 
+%\textbf{Minor Use:}\\
+%Free RTOS 2 years \\
+%Adobe Premiere 3 years\\
+%\-\
+%%
+%%
+%\textbf{Mechanical/Hobby:} \\
+%Mill 4 years\\
+%Lathe 4 years\\
+%3d printer 3 years\\
+%Laser cutter 2 years\\
+%Carbon Fiber 4 years\\
+%\end{flushright}
+%\end{minipage}
+%\end{minipage}}
+%\end{textblock}
+%
+%  
+%
+%
+% \begin{textblock}{6}(10.75,11.5)
+% \begin{figure}
+%  \centering
+% Scan to see some of my work\\
+%  \includegraphics[width=4cm]{qrcode}\\
+% \scriptsize	
+%    http://trevordecker.github.io/Resume\\
+% \end{figure}
+% \end{textblock}
+%
+%
+% total page overlay
+%
+%
+%\begin{textblock}{3}(-.4,0)
+%\begin{tikzpicture}
+%      \draw [ultra thick, draw=black, fill=red, opacity=0.0]
+%	  (0in,0in) --     
+%      (0in,-11.5in) --
+%      (8.5in,-11.5in) --     
+%      (8.5in,0in) --
+%      cycle;
+%\end{tikzpicture}
+%\end{textblock}
+%
+%
+% Printable area overlay
+%
+%  THis section is for making sure that the entrie document is in the printable region
+%
+\begin{textblock}{3}(-.4,0)
+\begin{tikzpicture}
+      \draw [ultra thick, draw=black, fill=blue, opacity=0.0]
+	  (0in,0in) 
+	  (.15in,-.22in)-- 
+      (.15in,-10.82in) --
+      (8.35in,-10.82in) --
+      (8.35in,-.22in) --
+      cycle;
+\end{tikzpicture}
+\end{textblock}
+% half way mark
+%
+%
+\begin{textblock}{3}(-.4,0)
+\begin{tikzpicture}
+      \draw [ultra thick, draw=black, fill=yellow, opacity=0.0]
+	  (0in,0in) 
+	  (0in,-.22in)-- 
+      (0in,-10.82in) --
+      (4.25in,-10.82in) --
+      (4.25in,-.22in) --
+      cycle;
+\end{tikzpicture}
+\end{textblock}
+\end{document}
